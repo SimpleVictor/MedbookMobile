@@ -24,9 +24,15 @@
 </head>
 
 <body>
-  <ion-app></ion-app>
 
-  <!-- cordova.js required for cordova apps -->
+
+<ion-app></ion-app>
+
+
+
+
+
+<!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
   <!-- Polyfill needed for platforms without Promise and Collection support -->
   <script src="build/js/es6-shim.min.js"></script>
@@ -35,6 +41,23 @@
   <script src="build/js/zone.js"></script>
   <!-- the bundle which is built from the app's source code -->
   <script src="build/js/app.bundle.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCpkIy_akmUniqUJhLtYPBE1vD7At8Laj4",
+    authDomain: "echoproject-c786f.firebaseapp.com",
+    databaseURL: "https://echoproject-c786f.firebaseio.com",
+    storageBucket: "echoproject-c786f.appspot.com",
+    messagingSenderId: "839621732792"
+  };
+  firebase.initializeApp(config);
+  console.log(firebase);
+</script>
+
+
 </body>
 
 </html>
