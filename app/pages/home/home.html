@@ -7,8 +7,23 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+
+  <ion-card *ngFor="let item of echoSpeech">
+
+    <ion-card-header>
+      <strong>Alexa Respons<span class="myelement"></span></strong>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>{{item}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+
+
 </ion-content>

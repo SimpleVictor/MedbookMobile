@@ -10,9 +10,30 @@
     <ion-title>Employees</ion-title>
   </ion-navbar>
 
+
+  <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
+    <ion-segment [(ngModel)]="workout" [attr.light]="isAndroid ? '' : null">
+      <ion-segment-button class="segment-activated" value="today">
+        Clocked In
+      </ion-segment-button>
+      <ion-segment-button value="progress">
+        On Call
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
 </ion-header>
 
 
 <ion-content padding>
+
+  <div [ngSwitch]="employee";
+
+  <ion-list *ngIf="clockedInEmp" inset>
+    <ion-item *ngFor="let item of clockedInEmp">
+      {{item.firstName}} {{item.lastname}}
+    </ion-item>
+  </ion-list>
 
 </ion-content>

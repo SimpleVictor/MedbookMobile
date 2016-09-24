@@ -10,11 +10,23 @@ export class FirebaseService implements OnInit{
   constructor(private http: Http) {}
 
   ngOnInit(){
-    console.log(firebase);
+
   }
 
-  watchData(){
-    console.log("bang bang");
+  watchForSpeech(){
+    console.log("we're straight");
+    var EmployeeRefs = firebase.database().ref();
+
+    EmployeeRefs.on('value', (snapshot) => {
+      console.log("something has been changed");
+
+      console.log(snapshot.val());
+
+      let obj = snapshot.val();
+
+      return obj;
+    });
+
   }
 
 }
