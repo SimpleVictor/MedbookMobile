@@ -32,6 +32,11 @@ export class HomePage implements OnInit , AfterContentChecked{
 
   }
 
+  clearData(){
+    this.echoSpeech = [];
+  }
+
+
 
 ngOnInit(){
 
